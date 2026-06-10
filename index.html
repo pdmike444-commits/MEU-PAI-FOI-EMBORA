@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pepel muca bol ponto liminal</title>
+
+<style>
+:root {
+  /* Paleta baseada na imagem: Roxo e Laranja anos 2000 */
+  --bg-dark: #0f051d;
+  --bg-panel: #24113a;
+  --border-orange: #f58220;
+  --retro-purple: #5a2792;
+  --retro-orange: #ff7900;
+  --text-main: #f5f8fc;
+  --text-muted: #b89bed;
+  --shadow-orange: rgba(255, 121, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Courier New", monospace;
+  color: var(--text-main);
+  /* Fundo quadriculado sutil pixelado simulando jogos antigos */
+  background: 
+    linear-gradient(45deg, #18092b 25%, transparent 25%) -20px 0,
+    linear-gradient(-45deg, #18092b 25%, transparent 25%) -20px 0,
+    linear-gradient(45deg, transparent 75%, #18092b 75%),
+    linear-gradient(-45deg, transparent 75%, #18092b 75%),
+    var(--bg-dark);
+  background-size: 40px 40px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Linhas de varredura CRT para efeito de monitor antigo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgba(18, 0, 36, 0) 50%, rgba(0, 0, 0, 0.4) 50%);
+  background-size: 100% 4px;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Container menor e compacto (Estética Anos 2000) */
+.shell {
+  width: 100%;
+  max-width: 750px;
+  background: var(--bg-panel);
+  border: 4px solid var(--retro-orange);
+  box-shadow: 0 0 25px var(--shadow-orange), inset 0 0 15px rgba(0,0,0,0.7);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Banner de Topo com a Imagem Informada */
+.retro-banner {
+  background: #110522;
+  border: 2px dashed var(--retro-purple);
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border: 3px solid var(--retro-orange);
+  image-rendering: pixelated; /* Mantém o aspecto de pixel art */
+  margin-bottom: 10px;
+}
+
+.system-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--retro-orange);
+  text-shadow: 2px 2px #000;
+  letter-spacing: 1px;
+}
+
+.system-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 5px;
+}
+
+.meta-info {
+  display: flex;
+  justify-content: space-between;
+  background: #190a2b;
+  padding: 8px 12px;
+  border: 1px solid var(--retro-purple);
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.meta-info b {
+  color: var(--retro-orange);
+}
+
+.console-manifesto {
+  background: rgba(0, 0, 0, 0.5);
+  border-left: 4px solid var(--retro-orange);
+  padding: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.console-manifesto ul {
+  margin-top: 10px;
+  margin-left: 20px;
+  list-style-type: square;
+  color: var(--text-muted);
+}
+
+.console-manifesto li b {
+  color: var(--text-main);
+}
+
+.section-label {
+  color: var(--retro-orange);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+/* Grid de botões empilhados/compactos */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.action-btn {
+  background: #170729;
+  border: 2px solid var(--retro-purple);
+  color: var(--text-main);
+  padding: 12px 8px;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Courier New", monospace;
+  font-size: 0.75rem;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background: var(--retro-orange);
+  border-color: #fff;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 0 10px var(--retro-orange);
+}
+
+.btn-title {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.footer-box {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--retro-purple);
+  padding: 15px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.footer-box strong {
+  color: var(--retro-orange);
+}
+
+@media(max-width: 500px) {
+  .meta-info {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+</style>
+</head>
+<body>
+
+<main class="shell">
+
+  <div class="retro-banner">
+    <img src="imagen_20260601190313.png" alt="pepel muca bol ponto liminal" class="avatar-img">
+    <h1 class="system-title">pepel muca bol ponto liminal</h1>
+    <div class="system-sub">MEDIOTEC SENAC // 1º ANO E</div>
+  </div>
+
+  <div class="meta-info">
+    <div>PROFESSOR: <b>LUIZ CAVALCANTI</b></div>
+    <div>MISSÃO: <b>GITHUB + HTML</b></div>
+  </div>
+
+  <div class="console-manifesto">
+    <strong>[OBJETIVO DA MISSÃO]</strong><br>
+    Desenvolver uma página pessoal em HTML/CSS contendo as seguintes diretrizes:
+    <ul>
+      <li><b>Nome Completo:</b> [Insira seu nome aqui]</li>
+      <li><b>Apresentação:</b> Suas informações essenciais.</li>
+      <li><b>Jogos Favoritos:</b> Seus títulos preferidos.</li>
+      <li><b>Tecnologias:</b> O que pretende aprender.</li>
+      <li><b>Projetos:</b> Trabalhos atuais ou passados.</li>
+    </ul>
+  </div>
+
+  <div class="section-label">> ETAPAS DO SISTEMA</div>
+
+  <div class="action-grid">
+    <button class="action-btn">
+      <span class="btn-title">ETAPA 01</span>
+      <span>CRIAR CONTA</span>
+    </button>
+
+    <button class="action-btn">
+      <span class="btn-title">ETAPA 02</span>
+      <span>REPOSITÓRIO</span>
+    </button>
+
+    <button class="action-btn">
+      <span class="btn-title">ETAPA 03</span>
+      <span>INDEX.HTML</span>
+    </button>
+
+    <button class="action-btn">
+      <span class="btn-title">ETAPA 04</span>
+      <span>COMMIT</span>
+    </button>
+
+    <button class="action-btn">
+      <span class="btn-title">ETAPA 05</span>
+      <span>GH-PAGES</span>
+    </button>
+  </div>
+
+  <div class="footer-box">
+    <strong>// UPGRADES DISPONÍVEIS:</strong><br>
+    [+] Adicionar foto ou avatar personalizado.<br>
+    [+] Linkar repositórios ativos do GitHub.<br>
+    [+] Customizar paleta de cores hexadecimais no CSS.
+  </div>
+
+</main>
+
+</body>
+</html>
